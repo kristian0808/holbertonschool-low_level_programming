@@ -1,28 +1,42 @@
 #include "main.h"
 
 /**
- *jack_bauer - checks
- *@h,m : the integer to check
- *Return: 'n'
+ *times_table - checks
+ *@i, j, p : the integer to check
+ *Return: 'p'
  */
 
-
-void jack_bauer(void)
-
+void times_table(void)
 {
-	int h, m;
+	int i, j, p;
 
-	for (h = 0; h < 24; h++)
-
+	for (i = 0; i < 10; i++)
 	{
-		for (m = 0; m < 60; m++)
+		for (j = 0; j < 10; j++)
 		{
-			_putchar (h / 10 + '0');
-			_putchar (h % 10 + '0');
-			_putchar (':');
-			_putchar (m / 10 + '0');
-			_putchar (m % 10 + '0');
-			_putchar ('\n');
+			p = i * j;
+			if (p >= 10)
+			{
+				_putchar (',');
+				_putchar (' ');
+				_putchar (p / 10 + '0');
+				_putchar (p % 10 + '0');
+			}
+			else
+			{
+				if (j == 0)
+				{
+					_putchar (p + '0');
+				}
+				else
+				{
+					_putchar (',');
+					_putchar (' ');
+					_putchar (' ');
+					_putchar (p + '0');
+				}
+			}
 		}
+		_putchar('\n');
 	}
 }
