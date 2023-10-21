@@ -1,24 +1,21 @@
 #include "main.h"
 /**
- * print_square - function
- * @i,j parameters for rows and colums
- *
- *
- * Return: 0 if size <= 0 else prints character # respectively if comletes the condition
+ *print_square - pritns the numbers
+ *@size: parameter is the size of the square to be printed
+ *Return: void
  */
 
 void print_square(int size)
 {
-	
 	if (size <= 0)
-		{
-			_putchar('\n');
-		}
+	{
+		_putchar('\n');
+	}
 	else
 		{
-			int i,j;
+			int i, j;
 
-			for ( i = 0; i < size; i++)
+			for (i = 0; i < size; i++)
 			{
 				for (j = 0; j < size; j++)
 				{
