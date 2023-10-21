@@ -1,14 +1,16 @@
 #include "main.h"
 /**
- * main - check the code
+ * print_square - function
+ * @i,j parameters for rows and colums
  *
- * Return: Always 0.
+ *
+ * Return: 0 if size <= 0 else prints character # respectively if comletes the condition
  */
 
 void print_square(int size)
 {
 	
-	if (size < 0)
+	if (size <= 0)
 		{
 			_putchar('\n');
 		}
