@@ -1,25 +1,20 @@
-#include "main.h"
 /**
- * _strcmp - Main
- * @s1: a
- * @s2: a
- * Return: diff
+ * _strcmp - function to compare string alphabetically
+ * @s1: first string
+ * @s2: second string
+ * Return: defference of strings
  */
-
 int _strcmp(char *s1, char *s2)
 {
-	int i = 0;
+	int i, def;
 
-	int diff = 0;
+	def = 0;
 
-	while (s1[i] != s2[i])
+	for (i = 0; s1[i] != '\0'; i++)
 	{
-		if (s1[i] != s2[i])
-		{
-			diff = s1[i] - s2[i];
-			break;
-		}
-		i++;
+		def = s1[i] - s2[i];
+		if (def != 0)
+			return (def);
 	}
-	return (diff);
+	return (def);
 }
