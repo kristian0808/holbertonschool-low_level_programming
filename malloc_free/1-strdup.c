@@ -1,24 +1,30 @@
+#include "main.h"
+#include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+
 /**
- * _strdup - function to create an arry
- * @str: sie to duplicate
- * Return: null or a pointer to s
+ * _strdup - duplicate a string
+ * @str: string to be duplicated.
+ * Return: pointer to the duplicated string, or NULL if insufficient memory
+ * was available.
  */
 
 char *_strdup(char *str)
 {
-	int i;
-	int len = strlen(str) + 1;
-
-	char *s = malloc(sizeof(char) * len);
+	char *tmp;
+	size_t len;
 
 	if (str == NULL)
+	{
 		return (NULL);
-	if (s == NULL)
+	}
+	len = strlen(str) + 1;
+	tmp = malloc(len);
+	if (tmp == NULL)
+	{
 		return (NULL);
-	for (i = 0; i < len; i++)
-		s[i] = str[i];
-	s[i] = '\0';
-	return (s);
+	}
+	memcpy(tmp, str, len);
+	return (tmp);
 }
